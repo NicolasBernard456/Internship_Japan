@@ -1,0 +1,4 @@
+<launch>
+	<include file = "$(find dual_arm_pa10_control)/launch/left_arm_control.launch"/>
+	<include file = "$(find dual_arm_pa10_control)/launch/right_arm_control.launch"/>
+</launch>

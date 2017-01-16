@@ -1,0 +1,114 @@
+pa10:
+   # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 1000
+    default : true
+  joint_trajectory_controller:
+    type: "effort_controllers/JointTrajectoryController"
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
+      - joint6
+      - joint7
+    gains:
+      joint1: {p: 400.0,i: 0.95, d: 15.0}
+      joint2: {p: 2800.0,i: 0.95, d: 18.0}
+      joint3: {p: 450.0,i: 1.75, d: 10.0}
+      joint4: {p: 1100.0,i: 1.75, d: 12.0}
+      joint5: {p: 150.0,i: 5.5, d: 5.0}
+      joint6: {p: 120.0,i: 5.5, d: 8.0}
+      joint7: {p: 100.0,i: 0.1, d: 0.01}      
+    #contraints:
+      #joint1:
+        #goal: 0.1
+      #joint2:
+        #goal: 0.1
+      #joint1:
+        #goal: 0.1
+      #joint3:
+        #goal: 0.1
+      #joint4:
+        #goal: 0.1
+      #joint5:
+        #goal: 0.1
+      #joint6:
+        #goal: 0.1
+      #joint7:
+        #goal: 0.1
+                      
+  gripper_action:
+    type: effort_controllers/GripperActionController
+    joints:
+      - right_prism
+      - left_prism 
+      
+      
+      
+      
+    #gripper_action:
+      #type: "control_msgs/GripperCommand"
+      #joints:
+        #- right_prism
+        #- left_prism 
+#hand:
+  #joint_state_controller:
+    #type: joint_state_controller/JointStateController
+    #publish_rate: 100
+    #default : True
+  #joint_trajectory_controller:
+    #type: "effort_controllers/JointTrajectoryController"
+    #joints: 
+      #- right_prism
+      #- left_prism 
+        
+        
+        ## Position Controllers ---------------------------------------
+  #joint1_position_controller:
+    #type: effort_controllers/JointPositionController
+    #joint: joint1
+    #pid: {p: 100.0, i: 0.01, d: 10.0}
+  ## Position Controllers ---------------------------------------
+  #joint2_position_controller:
+    #type: effort_controllers/JointPositionController
+    #joint: joint2
+    #pid: {p: 100.0, i: 0.01, d: 10.0}
+      ## Position Controllers ---------------------------------------
+  #joint3_position_controller:
+    #type: effort_controllers/JointPositionController
+    #joint: joint3
+    #pid: {p: 100.0, i: 0.01, d: 10.0}
+      ## Position Controllers ---------------------------------------
+  #joint4_position_controller:
+    #type: effort_controllers/JointPositionController
+    #joint: joint4
+    #pid: {p: 100.0, i: 0.01, d: 10.0}
+      ## Position Controllers ---------------------------------------
+  #joint5_position_controller:
+    #type: effort_controllers/JointPositionController
+    #joint: joint5
+    #pid: {p: 100.0, i: 0.01, d: 10.0}
+      ## Position Controllers ---------------------------------------
+  #joint6_position_controller:
+    #type: effort_controllers/JointPositionController
+    #joint: joint6
+    #pid: {p: 100.0, i: 0.01, d: 10.0}
+    
+
+    #default
+      #joint1: {p: 100.0, i: 0.01, d: 10.0}
+      #joint2: {p: 100.0, i: 0.01, d: 10.0}
+      #joint3: {p: 100.0, i: 0.01, d: 10.0}
+      #joint4: {p: 100.0, i: 0.01, d: 10.0}
+      #joint5: {p: 100.0, i: 0.01, d: 10.0}
+      #joint6: {p: 100.0, i: 0.01, d: 10.0}
+    
+      #joint1: {p: 3.0, i: 15.0, d: 40.0}
+      #joint2: {p: 15.0, i: 18.0, d: 280.0}
+      #joint3: {p: 8.0, i: 10.0, d: 45.0}
+      #joint4: {p: 8.0, i: 12.0, d: 110.0}
+      #joint5: {p: 1.2, i: 5.0, d: 15.0}
+      #joint6: {p: 2.25, i: 8.0, d: 12.0}    

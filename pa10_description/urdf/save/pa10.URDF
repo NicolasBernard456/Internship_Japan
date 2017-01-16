@@ -1,0 +1,974 @@
+<robot
+  name="pa10">
+    <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="7.94934697220915" />
+      <inertia
+        ixx="0.0510642767434423"
+        ixy="-0.000891049100773253"
+        ixz="3.65730202857334E-12"
+        iyy="0.0504677521912288"
+        iyz="1.39738812812236E-10"
+        izz="0.0536200422710813" />
+<!--	            <mass
+        value="0.1" />
+      <inertia
+        ixx="1"
+        ixy="0"
+        ixz="0"
+        iyy="1"
+        iyz="0"
+        izz="1" />-->
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="cyan">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="-0.0617285640357165 -4.46977211302629E-07 -2.02885402304353E-08"
+        rpy="0 0 0" />
+      <mass
+        value="2.71192568839201" />
+      <inertia
+        ixx="0.0243201044735161"
+        ixy="2.57044757772359E-07"
+        ixz="-3.2309369661469E-06"
+        iyy="0.0264027108199814"
+        iyz="1.37537607062047E-07"
+        izz="0.0115437749210812" />
+<!--                  <mass
+        value="0.1" />
+      <inertia
+        ixx="1"
+        ixy="0"
+        ixz="0"
+        iyy="1"
+        iyz="0"
+        izz="1" />-->
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+
+  
+  <joint
+    name="joint1"
+    type="revolute">
+    <limit upper="3.08823" lower="-3.08823" velocity="10" effort="10000"/>
+    <origin
+      xyz="-0.0018811 0 0.10209"
+      rpy="0 1.5708 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  
+  
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="-0.094181274379144 -4.63765533788296E-06 0.00129755326031771"
+        rpy="0 0 0" />
+      <mass
+        value="4.68012900111117" />
+      <inertia
+        ixx="0.011384781756112"
+        ixy="-5.17494991257085E-07"
+        ixz="-1.63266437372498E-06"
+        iyy="0.0663254092196658"
+        iyz="5.70854111984348E-08"
+        izz="0.0640549775205778" />
+<!--                <mass
+        value="0.1" />
+      <inertia
+        ixx="1"
+        ixy="0"
+        ixz="0"
+        iyy="1"
+        iyz="0"
+        izz="1" />-->
+	</inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="cyan">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  <joint
+    name="joint2"
+    type="revolute">
+    <limit upper="1.58725" lower="-1.58725" velocity="10" effort="10000"/>
+    <origin
+      xyz="-0.1135 0 0"
+      rpy="3.1416 3.0531E-16 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  
+  
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="-0.078996 -0.14816 -0.025657"
+        rpy="0 0 0" />
+     <mass
+        value="2.3539959451965" />
+<!--       <inertia
+        ixx="0.015058"
+        ixy="0.0015469"
+        ixz="-0.00070667"
+        iyy="0.018286"
+        iyz="-1.8788E-05"
+        izz="0.0088182" />-->
+<!--                  <mass
+        value="0.1" />-->
+      <inertia
+        ixx="1"
+        ixy="0"
+        ixz="0"
+        iyy="1"
+        iyz="0"
+        izz="1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  
+  <joint
+    name="joint3"
+    type="revolute">
+    <limit upper="3.03587" lower="-3.03587" velocity="10" effort="10000"/>
+    <origin
+      xyz="-0.2825 0 0.0029999"
+      rpy="0 1.2062E-07 6.5638E-07" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  
+  
+  <link
+    name="link5">
+    <inertial>
+<!--      <origin
+        xyz="-0.0847859918312063 -1.41827960625784E-05 -0.0002042047160195"
+        rpy="0 0 0" />-->
+      <mass
+        value="2.05851442359338" />
+      <inertia
+        ixx="0.00292511622390553"
+        ixy="1.41784162912146E-06"
+        ixz="0.00060867951854864"
+        iyy="0.020909916742985"
+        iyz="1.12871901963483E-06"
+        izz="0.0201272225685895" />
+<!--	                <mass
+        value="0.1" />
+      <inertia
+        ixx="1"
+        ixy="0"
+        ixz="0"
+        iyy="1"
+        iyz="0"
+        izz="1" />-->
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  <joint
+    name="joint4"
+    type="revolute">
+    <limit upper="2.3901" lower="-2.3901" velocity="10" effort="10000"/>
+    <origin
+      xyz="-0.16801 -1.7923E-05 0"
+      rpy="-3.1416 -1.1102E-16 0" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  
+  
+  <link
+    name="link6">
+    <inertial>
+      <origin
+        xyz="-0.00805272105966082 0.000110235624640742 0.00069149937940316"
+        rpy="0 0 0" />
+      <mass
+        value="1.37119764561499" />
+      <inertia
+        ixx="0.00333020297641962"
+        ixy="-7.8633755251471E-07"
+        ixz="-0.000117294966007319"
+        iyy="0.0117528447479912"
+        iyz="5.34812034426197E-09"
+        izz="0.00961712575206474" />
+<!--                  <mass
+        value="0.1" />
+      <inertia
+        ixx="1"
+        ixy="0"
+        ixz="0"
+        iyy="1"
+        iyz="0"
+        izz="1" />-->
+<!--      <inertia
+        ixx="1"
+        ixy="0"
+        ixz="0"
+        iyy="1"
+        iyz="0"
+        izz="1" />-->
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+   
+  <joint
+    name="joint5"
+    type="revolute">
+    <limit upper="4.44059" lower="-4.44059" velocity="10" effort="10000"/>
+    <origin
+      xyz="-0.36824 0 -0.0020003"
+      rpy="0 2.1649E-15 9.992E-16" />
+    <parent
+      link="link5" />
+    <child
+      link="link6" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  
+  
+  <link
+    name="link7">
+    <inertial>
+      <origin
+        xyz="0.0312759039478299 0.00123419126834035 0.00086359769683747"
+        rpy="0 0 0" />
+<!--      <mass
+        value="0.749475964810386" />
+      <inertia
+        ixx="0.000413239571105982"
+        ixy="-2.89936057339336E-05"
+        ixz="4.19297763029297E-06"
+        iyy="0.00379347775132525"
+        iyz="-5.2418695993306E-07"
+        izz="0.00378820414120642" />-->
+            <mass
+        value="0.1" />
+      <inertia
+        ixx="1"
+        ixy="0"
+        ixz="0"
+        iyy="1"
+        iyz="0"
+        izz="1" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  <joint
+    name="joint6"
+    type="revolute">
+    <limit upper="2.87979" lower="-2.87979" velocity="10" effort="10000"/>
+    <origin
+      xyz="-0.13176 0.00011584 0"
+      rpy="-1.5708 -2.387E-15 0" />
+    <parent
+      link="link6" />
+    <child
+      link="link7" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  
+
+  
+  <link name="link8"/>
+  
+    <joint
+    name="joint7"
+    type="continuous">
+    <origin
+      xyz="-0.0789 0 0"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="link7" />
+    <child
+      link="link8" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  
+  <joint
+    name="joint8"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link8" />
+    <child
+      link="gripper" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  
+    <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+    <transmission name="tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+    <transmission name="tran3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+    <transmission name="tran4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint4">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor4">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint5">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor5">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint6">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor6">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+    <transmission name="tran7">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint7">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor7">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+
+  
+  
+  
+  
+
+
+    
+    <!--To fixe the bqse of the robot-->
+  <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="link1"/>
+  </joint>
+  
+  
+  
+  
+    <!--<link
+    name="gripper">
+    <inertial>
+      <origin
+        xyz="0 0 0 "
+        rpy="0 0 0" />
+      <mass
+        value="0.503434618093404" />
+      <inertia
+        ixx="0.000342649917619129"
+        ixy="6.61938018518561E-08"
+        ixz="-1.11818564814543E-06"
+        iyy="0.000811982228895405"
+        iyz="3.59921930811222E-08"
+        izz="0.000868402490904897" />
+<!--            <mass
+        value="0.1" />
+      <inertia
+        ixx="1"
+        ixy="0"
+        ixz="0"
+        iyy="1"
+        iyz="0"
+        izz="1" />-->
+   <!-- </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/gripper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0 "
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pa10_description/meshes/gripper.STL" />
+      </geometry>
+    </collision>
+    </link>-->
+  
+  
+  
+    <link 
+    name="gripper"> 
+    <inertial> 
+      <origin 
+        xyz="0 7.27408835842214E-05 -2.77311286391718E-05" 
+        rpy="0 0 0" /> 
+      <mass 
+        value="0.318111544829444" /> 
+      <inertia 
+        ixx="0.000238894475405689" 
+        ixy="-9.95010231447356E-08" 
+        ixz="3.79329413750036E-08" 
+        iyy="0.000276504500502102" 
+        iyz="-3.00174602631607E-07" 
+        izz="0.000227584548635218" /> 
+    </inertial> 
+    <visual> 
+      <origin 
+        xyz="0 0 0" 
+        rpy="0 0 0" /> 
+      <geometry> 
+        <mesh 
+          filename="package://pa10_description/meshes/gripper_f.STL" /> 
+      </geometry> 
+      <material 
+        name=""> 
+        <color 
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" /> 
+      </material> 
+    </visual> 
+    <collision> 
+      <origin 
+        xyz="0 0 0" 
+        rpy="0 0 0" /> 
+      <geometry> 
+        <mesh 
+          filename="package://pa10_description/meshes/gripper_f.STL" /> 
+      </geometry> 
+    </collision> 
+  </link>
+  
+  <gazebo reference = "gripper">
+    <sensor name='contact_gripper' type='contact'>
+	<plugin name="plugin_contact_gripper" filename="libcontact.so"/>
+	<contact>
+		<collision>gripper_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+  
+  
+  
+  
+   <link 
+    name="right_finger"> 
+    <inertial> 
+      <origin 
+        xyz="-0.0149999999999998 0.00189510880456001 0.0191263593375393" 
+        rpy="0 0 0" /> 
+      <mass 
+        value="0.0168898172009748" /> 
+      <inertia 
+        ixx="3.30140945222581E-06" 
+        ixy="6.88214269644119E-22" 
+        ixz="1.69538938348869E-20" 
+        iyy="2.38014886911173E-06" 
+        iyz="-3.12343399300023E-21" 
+        izz="1.52846665341064E-06" /> 
+    </inertial> 
+    <visual> 
+      <origin 
+        xyz="0 0 0" 
+        rpy="0 0 0" /> 
+      <geometry> 
+        <mesh 
+          filename="package://pa10_description/meshes/right_finger.STL" /> 
+      </geometry> 
+      <material 
+        name=""> 
+        <color 
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" /> 
+      </material> 
+    </visual> 
+    <collision> 
+      <origin 
+        xyz="0 0 0" 
+        rpy="0 0 0" /> 
+      <geometry> 
+        <mesh 
+          filename="package://pa10_description/meshes/right_finger.STL" /> 
+      </geometry> 
+    </collision> 
+  </link> 
+<gazebo reference="right_finger">
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <mu1>100.0</mu1>
+  <mu2>100.0</mu2>
+  <minDepth>0.001</minDepth>
+  
+  <sensor name='contact_finger_right' type='contact'>
+	<plugin name="plugin_contact_finger_right" filename="libcontact.so"/>
+	<contact>
+		<collision>right_finger_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+    
+    <joint
+    name="right_prism"
+    type="prismatic">
+  <origin 
+      xyz="0.0679999999999998 -0.00213430422499739 -0.00750000000000002" 
+      rpy="0.245285411583501 1.57079630572147 0.249893760632784" />
+    <parent
+      link="gripper" />
+    <child
+      link="right_finger" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="100"
+      velocity="0"
+      upper="0.015"
+      lower="-0.015"/>
+    <dynamics friction="100.0"/>
+  </joint>
+
+  
+ <gazebo reference="right_prism">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+</gazebo>
+  
+  
+  <link 
+    name="left_finger"> 
+    <inertial> 
+      <origin 
+        xyz="-0.0149999999999998 0.0018951088045599 0.0191263593375393" 
+        rpy="0 0 0" /> 
+      <mass 
+        value="0.0168898172009748" /> 
+      <inertia 
+        ixx="3.30140945222581E-06" 
+        ixy="9.23133563609179E-22" 
+        ixz="1.68083100470775E-20" 
+        iyy="2.38014886911173E-06" 
+        iyz="-3.12343399300023E-21" 
+        izz="1.52846665341064E-06" /> 
+    </inertial> 
+    <visual> 
+      <origin 
+        xyz="0 0 0" 
+        rpy="0 0 0" /> 
+      <geometry> 
+        <mesh 
+          filename="package://pa10_description/meshes/left_finger.STL" /> 
+      </geometry> 
+      <material 
+        name=""> 
+        <color 
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" /> 
+      </material> 
+    </visual> 
+    <collision> 
+      <origin 
+        xyz="0 0 0" 
+        rpy="0 0 0" /> 
+      <geometry> 
+        <mesh 
+          filename="package://pa10_description/meshes/left_finger.STL" /> 
+      </geometry> 
+    </collision>
+        
+  
+  </link>
+  
+<gazebo reference="left_finger">
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <mu1>100.0</mu1>
+  <mu2>100.0</mu2>
+  <minDepth>0.001</minDepth>
+    <sensor name='contact_finger_left' type='contact'>
+	<plugin name="plugin_contact_finger_left" filename="libcontact.so"/>
+	<contact>
+		<collision>left_finger_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+  
+  
+  <joint
+    name="left_prism"
+    type="prismatic">     
+    <origin 
+      xyz="0.0680000000000001 -0.00213430422499861 -0.0224999999999999" 
+      rpy="0.245285411583501 1.57079630572147 0.249893760632784" /> 
+    <parent
+      link="gripper" />
+    <child
+      link="left_finger" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="100"
+      velocity="0"
+      upper="0.015"
+      lower="-0.015" />
+    <dynamics friction="100.0"/>
+  </joint>
+
+<!--<gazebo reference="left_prism">
+    <implicitSpringDamper>1</implicitSpringDamper>
+    <provideFeedback>true</provideFeedback>
+      <sensor name="my_force_sensor" type="force_torque">
+	  
+	  <force_torque>
+		<frame>parent</frame>
+	</force_torque>
+	<update_rate>200</update_rate>
+  </sensor>
+</gazebo>
+
+<gazebo reference = "left_prism">
+	<plugin name="gazebo_ros_control" filename="libgazebo_ros_ft_sensor.so">
+		<updateRate>100.0</updateRate>	
+		<topicName>ft_sensor_topic</topicName>
+		<jointName>left_prism</jointName>
+	</plugin>
+</gazebo>-->
+  
+<transmission name="tran8">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_prism">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor8">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+<transmission name="tran9">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_prism">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor9">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+  
+<!--  <gazebo>
+    <gripper name="grasping">
+        <grasp_check>
+            <attach_steps>20</attach_steps>
+            <detach_steps>40</detach_steps>
+            <min_contact_count>1</min_contact_count>
+        </grasp_check>
+        <gripper_link>left_finger</gripper_link>
+        <gripper_link>right_finger</gripper_link>
+        <palm_link>gripper</palm_link>
+    </gripper>
+  </gazebo>-->
+  
+  
+<!--Ros gazebo_ros_control is used to control the robot from ros in gazebo    -->
+    <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/pa10</robotNamespace>
+<!--       <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType> -->
+    </plugin>    
+   
+  </gazebo>
+<!--  <gazebo>
+    <static>true</static>
+  </gazebo>-->
+  <selfcollide>1</selfcollide>
+
+    <link name="world"/>
+
+<gazebo reference = "link1">  
+    <material>Gazebo/Grey</material>
+</gazebo>
+
+<gazebo reference = "link3">  
+    <material>Gazebo/Grey</material>
+</gazebo>
+
+
+<gazebo reference = "link5">  
+    <material>Gazebo/Grey</material>
+</gazebo>
+
+
+<gazebo reference = "link7">  
+    <material>Gazebo/Grey</material>
+</gazebo>
+
+<gazebo reference = "link6">
+	<material>Gazebo/Turquoise</material>
+</gazebo>
+<gazebo reference = "link2">
+	<material>Gazebo/Turquoise</material>
+</gazebo>
+    
+  <gazebo reference = "link4">
+	<material>Gazebo/Turquoise</material>
+</gazebo>
+    
+<gazebo>
+   <plugin name="gazebo_grasp_fix" filename="libgazebo_grasp_fix.so">
+        <arm>
+           <arm_name>pa10</arm_name>
+           <palm_link> link8 </palm_link>
+           <gripper_link> left_finger </gripper_link>
+           <gripper_link> right_finger </gripper_link>
+        </arm>
+       <forces_angle_tolerance>100</forces_angle_tolerance>
+       <update_rate>4</update_rate>
+       <grip_count_threshold>4</grip_count_threshold>
+       <max_grip_count>8</max_grip_count>
+       <release_tolerance>0.005</release_tolerance>
+       <disable_collisions_on_attach>false</disable_collisions_on_attach>
+       <contact_topic>__default_topic__</contact_topic>
+    </plugin>
+</gazebo>
+
+</robot>

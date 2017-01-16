@@ -1,0 +1,20 @@
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find pa10_control)/config/pa10_control.yaml" command="load"/>
+  <rosparam file="$(find pa10_control)/config/pa10_gripper.yaml" command="load"/>
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" ns="/pa10" args="joint_state_controller
+					  joint_trajectory_controller"/>
+  
+  <node name="controller_spawner_gripper" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" ns="/pa10" args="gripper_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/pa10/joint_states" />
+  </node>
+
+</launch>

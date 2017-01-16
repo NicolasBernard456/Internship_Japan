@@ -1,0 +1,8 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: pa10_description
+    relative_path: urdf/hand_pa10.URDF
+  SRDF:
+    relative_path: config/hand_pa10.srdf
+  CONFIG:
+    generated_timestamp: 1469770922

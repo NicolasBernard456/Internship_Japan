@@ -1,0 +1,27 @@
+/dual_arm_pa10/right_arm:
+  joint_state_controller_hand:
+    type: joint_state_controller/JointStateController
+    publish_rate: 1000
+    default : true
+  joint_trajectory_controller_hand:
+    type: "effort_controllers/JointTrajectoryController"
+    joints:
+      - right_arm_finger1_joint1
+      - right_arm_finger1_joint2
+      - right_arm_finger1_joint3
+      - right_arm_finger2_joint1
+      - right_arm_finger2_joint2
+      - right_arm_finger2_joint3
+      - right_arm_finger3_joint1
+      - right_arm_finger3_joint2
+      - right_arm_finger3_joint3
+    gains:
+      right_arm_finger1_joint1: {p: 5.70, i: 0.002}
+      right_arm_finger1_joint2: {p: 5.70, i: 0.002}
+      right_arm_finger1_joint3: {p: 5.70, i: 0.002}
+      right_arm_finger2_joint1: {p: 5.70, i: 0.002}
+      right_arm_finger2_joint2: {p: 5.70, i: 0.002}
+      right_arm_finger2_joint3: {p: 5.70, i: 0.002}
+      right_arm_finger3_joint1: {p: 5.70, i: 0.002}
+      right_arm_finger3_joint2: {p: 5.70, i: 0.002}
+      right_arm_finger3_joint3: {p: 5.70, i: 0.002}

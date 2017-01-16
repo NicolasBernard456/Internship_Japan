@@ -1,0 +1,845 @@
+<robot
+  name="dual_arm_pa10">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.555507522352584 -1.65042128673303 -0.217101228771685"
+        rpy="0 0 0" />
+      <mass
+        value="97.6917917377576" />
+      <inertia
+        ixx="40.4740750778419"
+        ixy="-0.229482797122451"
+        ixz="-16.9093482209195"
+        iyy="45.3093503314469"
+        iyz="7.1380697923764"
+        izz="30.5785915439064" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_arm_link1">
+    <inertial>
+      <origin
+        xyz="-0.0990893449544722 -0.00249341785325718 -0.0014162454500033"
+        rpy="0 0 0" />
+      <mass
+        value="7.94934699323051" />
+      <inertia
+        ixx="0.0504677524184006"
+        ixy="-0.000774791198524652"
+        ixz="-0.000440076287254469"
+        iyy="0.0516876870322434"
+        iyz="0.00109756557708091"
+        izz="0.0529966322188422" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint1"
+    type="fixed">
+    <origin
+      xyz="-0.825145544061466 -1.25307055504876 0.636477580278836"
+      rpy="1.5707963267949 0.0284335968117168 -3.09514696623158" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_arm_link1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_arm_link2">
+    <inertial>
+      <origin
+        xyz="-0.264301619913095 -2.76250164082947E-05 -9.6935392693176E-05"
+        rpy="0 0 0" />
+      <mass
+        value="2.7310377376062" />
+      <inertia
+        ixx="0.0244683816547645"
+        ixy="-6.49243268067506E-06"
+        ixz="-2.50224500514501E-06"
+        iyy="0.0141012726454577"
+        iyz="-0.00566836100673695"
+        izz="0.0240473671043853" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-2.1684E-19 0 -3.4423E-18" />
+    <parent
+      link="left_arm_link1" />
+    <child
+      link="left_arm_link2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      upper="3.08823"
+      lower="-3.08823" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  <link
+    name="left_arm_link3">
+    <inertial>
+      <origin
+        xyz="-0.0437020078273007 0.0201807384969035 0.0919936313948935"
+        rpy="0 0 0" />
+      <mass
+        value="4.68020201917654" />
+      <inertia
+        ixx="0.0640552019140096"
+        ixy="4.05206905839881E-07"
+        ixz="1.57128361053048E-06"
+        iyy="0.0638016370383407"
+        iyz="0.0115019100601524"
+        izz="0.0139090195725392" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint3"
+    type="revolute">
+    <origin
+      xyz="-0.315500000000003 -0.0410165202636339 0.0185106743659957"
+      rpy="1.63982850832689 -0.423929613598005 -1.5707963267949" />
+    <parent
+      link="left_arm_link2" />
+    <child
+      link="left_arm_link3" />
+    <axis
+      xyz="-1 0 0" />
+        <limit
+      upper="1.58725" 
+      lower="-1.58725" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  <link
+    name="left_arm_link4">
+    <inertial>
+      <origin
+        xyz="0.0770144259784842 0.00148626917704375 0.000635508689203812"
+        rpy="0 0 0" />
+      <mass
+        value="2.35409067807949" />
+      <inertia
+        ixx="0.0145010964698539"
+        ixy="0.000250497590177181"
+        ixz="8.57909539156733E-05"
+        iyy="0.00960614995288886"
+        iyz="0.00282720741589722"
+        izz="0.0180549888659777" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint4"
+    type="revolute">
+    <origin
+      xyz="-0.0419999999999998 0.0674051292770802 0.307192634172875"
+      rpy="-0.416063817143622 -1.35479645114884 1.5707963267949" />
+    <parent
+      link="left_arm_link3" />
+    <child
+      link="left_arm_link4" />
+    <axis
+      xyz="-1 0 0" />
+        <limit
+      upper="3.03587" 
+      lower="-3.03587"
+      effort="10000"
+      velocity="10" />
+  </joint>
+  <link
+    name="left_arm_link5">
+    <inertial>
+      <origin
+        xyz="0.0557957612103193 -0.0847616079886823 -0.00203557437514561"
+        rpy="0 0 0" />
+      <mass
+        value="2.05851591363861" />
+      <inertia
+        ixx="0.0201272337149153"
+        ixy="0.000608483891747073"
+        ixz="1.56384202641586E-05"
+        iyy="0.0029354076975442"
+        iyz="0.000430074997588907"
+        izz="0.0208996370775355" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint5"
+    type="revolute">
+    <origin
+      xyz="0.136002290415426 0.0535829126405543 0.0162748824339065"
+      rpy="-1.27491991617733 0.295199821145676 -1.57079632679489" />
+    <parent
+      link="left_arm_link4" />
+    <child
+      link="left_arm_link5" />
+    <axis
+      xyz="-1 0 0" />
+        <limit
+      upper="2.3901"
+      lower="-2.3901" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  <link
+    name="left_arm_link6">
+    <inertial>
+      <origin
+        xyz="-0.114795470764761 0.000699693476092333 -2.73723221239502E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1.371197775989" />
+      <inertia
+        ixx="0.00333020319367068"
+        ixy="-0.000116558855928963"
+        ixz="-1.31426888505106E-05"
+        iyy="0.00964721971591787"
+        iyz="0.000251722579386805"
+        izz="0.0117227531202603" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint6"
+    type="revolute">
+    <origin
+      xyz="0.0539997253029847 -0.261425869680373 -0.00623452178610013"
+      rpy="-0.00757901029071751 -0.0238437178004684 1.5707963267949" />
+    <parent
+      link="left_arm_link5" />
+    <child
+      link="left_arm_link6" />
+    <axis
+      xyz="-1 0 0" />
+        <limit
+      upper="4.44059"
+      lower="-4.44059" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  <link
+    name="left_arm_link7">
+    <inertial>
+      <origin
+        xyz="-0.00535247907135394 0.0191560955756953 -0.0247380697968124"
+        rpy="0 0 0" />
+      <mass
+        value="0.749475997606934" />
+      <inertia
+        ixx="0.00379347780322518"
+        ixy="1.75350974225649E-05"
+        ixz="-2.3095980648119E-05"
+        iyy="0.00260859869436425"
+        iyz="-0.0016092467697378"
+        izz="0.00159284506892114" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint7"
+    type="revolute">
+    <origin
+      xyz="-0.238499999999999 0.00410291994215894 0.000373839717370386"
+      rpy="-2.78411821151897 -0.118985412396407 1.57079632679489" />
+    <parent
+      link="left_arm_link6" />
+    <child
+      link="left_arm_link7" />
+    <axis
+      xyz="-1 0 0" />
+        <limit
+      upper="2.87979"
+      lower="-2.87979" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  <link
+    name="right_arm_link1">
+    <inertial>
+      <origin
+        xyz="-0.0990893449885417 -0.00221210203872302 0.00182468787374401"
+        rpy="0 0 0" />
+      <mass
+        value="7.94934695709389" />
+      <inertia
+        ixx="0.0504677520230315"
+        ixy="-0.000687376581381377"
+        ixz="0.000566993771661591"
+        iyy="0.0520991189275065"
+        iyz="-0.00125455789727977"
+        izz="0.052585199923649" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint1"
+    type="fixed">
+    <origin
+      xyz="-1.11175813641434 -1.80767325399646 0.573916002170496"
+      rpy="1.5707963267949 -0.0713445717041827 2.14489912813932" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_arm_link1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_arm_link2">
+    <inertial>
+      <origin
+        xyz="-0.26430074701895 -5.94995160773104E-05 -8.07923039869429E-05"
+        rpy="0 0 0" />
+      <mass
+        value="2.73095645322122" />
+      <inertia
+        ixx="0.0244689850962347"
+        ixy="-7.58935472427557E-06"
+        ixz="5.07021160189337E-07"
+        iyy="0.0190395298910916"
+        iyz="-0.00753947534796983"
+        izz="0.0191086997402152" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 5.55111512312578E-17 -2.08166817117217E-17" />
+    <parent
+      link="right_arm_link1" />
+    <child
+      link="right_arm_link2" />
+    <axis
+      xyz="-1 0 0" />
+        <limit
+      upper="3.08823"
+      lower="-3.08823" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  <link
+    name="right_arm_link3">
+    <inertial>
+      <origin
+        xyz="-0.0437020079839598 0.00861084777811993 0.0937866995189534"
+        rpy="0 0 0" />
+      <mass
+        value="4.68020214054429" />
+      <inertia
+        ixx="0.0640552088271957"
+        ixy="2.12657946344411E-07"
+        ixz="1.60794191713613E-06"
+        iyy="0.0658656934626095"
+        iyz="0.00500527892016412"
+        izz="0.0118449696339646" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint3"
+    type="revolute">
+    <origin
+      xyz="-0.315499999999999 -0.0319368027244318 0.0317023758062656"
+      rpy="1.46969946685779 -0.781711269210409 -1.5707963267949" />
+    <parent
+      link="right_arm_link2" />
+    <child
+      link="right_arm_link3" />
+    <axis
+      xyz="-1 0 0" />
+        <limit
+      upper="1.58725" 
+      lower="-1.58725" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  <link
+    name="right_arm_link4">
+    <inertial>
+      <origin
+        xyz="-0.0770144192900173 -0.00146988859066011 0.000672114471354845"
+        rpy="0 0 0" />
+      <mass
+        value="2.35409632919604" />
+      <inertia
+        ixx="0.0145011364648668"
+        ixy="0.000248292535091203"
+        ixz="-9.19838669676694E-05"
+        iyy="0.00975169292051933"
+        iyz="-0.00303340235564235"
+        izz="0.0179094852762262" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint4"
+    type="revolute">
+    <origin
+      xyz="-0.042 0.0287698185108878 0.313182157036093"
+      rpy="-2.3594227330078 1.47919053867106 -1.57079632679489" />
+    <parent
+      link="right_arm_link3" />
+    <child
+      link="right_arm_link4" />
+    <axis
+      xyz="-1 0 0" />
+        <limit
+      upper="3.03587" 
+      lower="-3.03587"
+      effort="10000"
+      velocity="10" />
+  </joint>
+  <link
+    name="right_arm_link5">
+    <inertial>
+      <origin
+        xyz="-0.0487042375150544 -0.00360759548777567 -0.0847092564993757"
+        rpy="0 0 0" />
+      <mass
+        value="2.05851565958655" />
+      <inertia
+        ixx="0.0201272331122399"
+        ixy="2.48730564349846E-05"
+        ixz="0.000608177417062807"
+        iyy="0.0208772346589002"
+        iyz="0.000766134011295065"
+        izz="0.00295781712603303" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint5"
+    type="revolute">
+    <origin
+      xyz="-0.136002290415432 0.0460318440149761 -0.0152748048060705"
+      rpy="1.36781816034305 0.320026211951604 1.5707963267949" />
+    <parent
+      link="right_arm_link4" />
+    <child
+      link="right_arm_link5" />
+    <limit
+      upper="2.3901" 
+     lower="-2.3901" 
+      effort="10000"
+      velocity="10" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="right_arm_link6">
+    <inertial>
+      <origin
+        xyz="-0.123795462653187 0.000155037947671355 0.000682873705954767"
+        rpy="0 0 0" />
+      <mass
+        value="1.37119769202921" />
+      <inertia
+        ixx="0.00333020300274464"
+        ixy="-8.46849313525913E-06"
+        ixz="-0.000116991533531673"
+        iyy="0.0117436785375504"
+        iyz="0.000139614984425959"
+        izz="0.00962629185761271" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint6"
+    type="revolute">
+    <origin
+      xyz="-0.0505000000000002 -0.0107859770313061 -0.252269724104025"
+      rpy="-2.81559765910584 -1.52806669745706 1.5707963267949" />
+    <parent
+      link="right_arm_link5" />
+    <child
+      link="right_arm_link6" />
+    <axis
+      xyz="-1 0 0" />
+        <limit
+      upper="4.44059"
+      lower="-4.44059" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  <link
+    name="right_arm_link7">
+    <inertial>
+      <origin
+        xyz="-0.0142341914721571 -0.00905767585248796 -0.0299480722277288"
+        rpy="0 0 0" />
+      <mass
+        value="0.749476057175215" />
+      <inertia
+        ixx="0.00379347797034595"
+        ixy="-8.65896280890235E-06"
+        ixz="-2.7675376527164E-05"
+        iyy="0.00345412282340719"
+        iyz="0.00100792860132432"
+        izz="0.000747321057415953" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint7"
+    type="revolute">
+    <origin
+      xyz="-0.2475 0.000966955324066432 0.0129645702976229"
+      rpy="-1.5845175052638 -1.50523970337924 1.57079632679485" />
+    <parent
+      link="right_arm_link6" />
+    <child
+      link="right_arm_link7" />
+    <axis
+      xyz="-1 0 0" />
+        <limit
+      upper="2.87979"
+      lower="-2.87979" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+</robot>

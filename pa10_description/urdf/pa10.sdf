@@ -1,0 +1,574 @@
+<sdf version='1.4'>
+  <model name='pa10'>
+    <link name='link1'>
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>7.94935</mass>
+        <inertia>
+          <ixx>0.0510643</ixx>
+          <ixy>-0.000891049</ixy>
+          <ixz>3.6573e-12</ixz>
+          <iyy>0.0504678</iyy>
+          <iyz>1.39739e-10</iyz>
+          <izz>0.05362</izz>
+        </inertia>
+      </inertial>
+      <collision name='link1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/link1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/link1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='fixed' type='revolute'>
+      <child>link1</child>
+      <parent>world</parent>
+      <axis>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+        </dynamics>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+    <link name='link2'>
+      <pose>-0.0018811 0 0.10209 3.14159 1.57079 3.14159</pose>
+      <inertial>
+        <pose>-0.0617286 -4.46977e-07 -2.02885e-08 0 -0 0</pose>
+        <mass>2.71193</mass>
+        <inertia>
+          <ixx>0.0243201</ixx>
+          <ixy>2.57045e-07</ixy>
+          <ixz>-3.23094e-06</ixz>
+          <iyy>0.0264027</iyy>
+          <iyz>1.37538e-07</iyz>
+          <izz>0.0115438</izz>
+        </inertia>
+      </inertial>
+      <collision name='link2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/link2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/link2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint1' type='revolute'>
+      <child>link2</child>
+      <parent>link1</parent>
+      <axis>
+        <xyz>-3.67321e-06 0 -1</xyz>
+        <limit>
+          <lower>-3.08823</lower>
+          <upper>3.08823</upper>
+          <effort>10000</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='link3'>
+      <pose>-0.00188068 0 0.21559 7.34641e-06 1.57079 3.14159</pose>
+      <inertial>
+        <pose>-0.0941813 -4.63766e-06 0.00129755 0 -0 0</pose>
+        <mass>4.68013</mass>
+        <inertia>
+          <ixx>0.0113848</ixx>
+          <ixy>-5.17495e-07</ixy>
+          <ixz>-1.63266e-06</ixz>
+          <iyy>0.0663254</iyy>
+          <iyz>5.70854e-08</iyz>
+          <izz>0.064055</izz>
+        </inertia>
+      </inertial>
+      <collision name='link3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/link3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/link3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint2' type='revolute'>
+      <child>link3</child>
+      <parent>link2</parent>
+      <axis>
+        <xyz>1 -7.34641e-06 -3.67321e-06</xyz>
+        <limit>
+          <lower>-1.58725</lower>
+          <upper>1.58725</upper>
+          <effort>10000</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='link4'>
+      <pose>-0.00487955 2.20385e-08 0.49809 0.182708 1.57079 -2.95889</pose>
+      <inertial>
+        <pose>-0.078996 -0.14816 -0.025657 0 -0 0</pose>
+        <mass>2.354</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+      <collision name='link4_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/link4.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link4_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/link4.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint3' type='revolute'>
+      <child>link4</child>
+      <parent>link3</parent>
+      <axis>
+        <xyz>-3.55259e-06 -6.56381e-07 -1</xyz>
+        <limit>
+          <lower>-3.03587</lower>
+          <upper>3.03587</upper>
+          <effort>10000</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='link5'>
+      <pose>-0.00487895 1.80553e-05 0.6661 -2.95889 1.57079 -2.95889</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>2.05851</mass>
+        <inertia>
+          <ixx>0.00292512</ixx>
+          <ixy>1.41784e-06</ixy>
+          <ixz>0.00060868</ixz>
+          <iyy>0.0209099</iyy>
+          <iyz>1.12872e-06</iyz>
+          <izz>0.0201272</izz>
+        </inertia>
+      </inertial>
+      <collision name='link5_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/link5.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link5_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/link5.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint4' type='revolute'>
+      <child>link5</child>
+      <parent>link4</parent>
+      <axis>
+        <xyz>1 7.9171e-14 -3.55259e-06</xyz>
+        <limit>
+          <lower>-2.3901</lower>
+          <upper>2.3901</upper>
+          <effort>10000</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='link6'>
+      <pose>-0.00687794 1.8297e-05 1.03434 -2.95889 1.57079 -2.95889</pose>
+      <inertial>
+        <pose>-0.00805272 0.000110236 0.000691499 0 -0 0</pose>
+        <mass>1.3712</mass>
+        <inertia>
+          <ixx>0.0033302</ixx>
+          <ixy>-7.86338e-07</ixy>
+          <ixz>-0.000117295</ixz>
+          <iyy>0.0117528</iyy>
+          <iyz>5.34812e-09</iyz>
+          <izz>0.00961713</izz>
+        </inertia>
+      </inertial>
+      <collision name='link6_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/link6.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link6_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/link6.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint5' type='revolute'>
+      <child>link6</child>
+      <parent>link5</parent>
+      <axis>
+        <xyz>-3.55259e-06 -6.56381e-07 -1</xyz>
+        <limit>
+          <lower>-4.44059</lower>
+          <upper>4.44059</upper>
+          <effort>10000</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='link7'>
+      <pose>-0.00687747 0.000134224 1.1661 1.75349 1.57079 -2.95889</pose>
+      <inertial>
+        <pose>0.0312759 0.00123419 0.000863598 0 -0 0</pose>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+      <collision name='link7_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/link7.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link7_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/link7.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint6' type='revolute'>
+      <child>link7</child>
+      <parent>link6</parent>
+      <axis>
+        <xyz>-1 -3.67321e-06 3.55259e-06</xyz>
+        <limit>
+          <lower>-2.87979</lower>
+          <upper>2.87979</upper>
+          <effort>10000</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='link8'>
+      <pose>-0.00687719 0.000134275 1.245 -1.75349 -1.57079 0.182701</pose>
+      <inertial>
+        <pose>0 7.27409e-05 -2.77311e-05 0 -0 0</pose>
+        <mass>0.318112</mass>
+        <inertia>
+          <ixx>0.000238894</ixx>
+          <ixy>-9.9501e-08</ixy>
+          <ixz>3.79329e-08</ixz>
+          <iyy>0.000276505</iyy>
+          <iyz>-3.00175e-07</iyz>
+          <izz>0.000227585</izz>
+        </inertia>
+      </inertial>
+      <collision name='link8_collision_gripper'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/gripper_f.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link8_visual_gripper'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/gripper_f.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint7' type='revolute'>
+      <child>link8</child>
+      <parent>link7</parent>
+      <axis>
+        <xyz>3.55259e-06 6.56381e-07 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='left_finger'>
+      <pose>-0.00901117 -0.0223657 1.313 -0.0046119 -6.76787e-07 -1.57079</pose>
+      <inertial>
+        <pose>-0.015 0.00189511 0.0191264 0 -0 0</pose>
+        <mass>0.0168898</mass>
+        <inertia>
+          <ixx>3.30141e-06</ixx>
+          <ixy>9.23134e-22</ixy>
+          <ixz>1.68083e-20</ixz>
+          <iyy>2.38015e-06</iyy>
+          <iyz>-3.12343e-21</iyz>
+          <izz>1.52847e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='left_finger_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/left_finger.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>100</kd>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='left_finger_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/left_finger.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='left_prism' type='prismatic'>
+      <child>left_finger</child>
+      <parent>link8</parent>
+      <axis>
+        <xyz>3.67842e-06 -1 6.76787e-07</xyz>
+        <limit>
+          <lower>-0.015</lower>
+          <upper>0.015</upper>
+          <effort>10</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.7</damping>
+        </dynamics>
+      </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <link name='right_finger'>
+      <pose>-0.00901123 -0.00736569 1.313 -0.0046119 -6.76787e-07 -1.57079</pose>
+      <inertial>
+        <pose>-0.015 0.00189511 0.0191264 0 -0 0</pose>
+        <mass>0.0168898</mass>
+        <inertia>
+          <ixx>3.30141e-06</ixx>
+          <ixy>6.88214e-22</ixy>
+          <ixz>1.69539e-20</ixz>
+          <iyy>2.38015e-06</iyy>
+          <iyz>-3.12343e-21</iyz>
+          <izz>1.52847e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='right_finger_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/right_finger.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>100</kd>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='right_finger_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://pa10_description/meshes/right_finger.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='right_prism' type='prismatic'>
+      <child>right_finger</child>
+      <parent>link8</parent>
+      <axis>
+        <xyz>3.67842e-06 -1 6.76787e-07</xyz>
+        <limit>
+          <lower>-0.015</lower>
+          <upper>0.015</upper>
+          <effort>10</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.7</damping>
+        </dynamics>
+      </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+          <cfm_damping>1</cfm_damping>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+        </ode>
+      </physics>
+    </joint>
+    <static>0</static>
+    <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
+      <robotNamespace>/pa10</robotNamespace>
+    </plugin>
+  </model>
+</sdf>

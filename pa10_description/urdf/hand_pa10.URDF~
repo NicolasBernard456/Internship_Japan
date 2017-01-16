@@ -1,0 +1,526 @@
+<robot
+  name="hand_pa10">
+  <link
+    name="gripper">
+    <inertial>
+      <origin
+        xyz="0.0368692200186534 -0.00283604582715048 -0.00525425297379966"
+        rpy="0 0 0" />
+      <mass
+        value="0.430073369143217" />
+      <inertia
+        ixx="0.000611744889843359"
+        ixy="-1.03208571938053E-06"
+        ixz="2.06001439258419E-06"
+        iyy="0.000343341303407109"
+        iyz="-6.34033786478912E-05"
+        izz="0.000560583735478908" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/gripper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/gripper.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="finger1_link1">
+    <inertial>
+      <origin
+        xyz="0.0138359379109045 0.0281806402702964 -0.0257944694497972"
+        rpy="0 0 0" />
+      <mass
+        value="0.0238775694524306" />
+      <inertia
+        ixx="7.43008148251482E-06"
+        ixy="1.06111071792449E-09"
+        ixz="-5.2803029374438E-08"
+        iyy="7.34938228455193E-06"
+        iyz="9.05512050696601E-08"
+        izz="1.74807485447877E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger1_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger1_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger1_joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="gripper" />
+    <child
+      link="finger1_link1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="finger1_link2">
+    <inertial>
+      <origin
+        xyz="0.013774660537609 0.0328390126287061 -0.0889026900722266"
+        rpy="0 0 0" />
+      <mass
+        value="0.0146713445312356" />
+      <inertia
+        ixx="3.8883858035755E-06"
+        ixy="3.55698220501133E-10"
+        ixz="-2.28417482063826E-08"
+        iyy="3.86992555832795E-06"
+        iyz="-4.1197061727866E-07"
+        izz="7.68595449428459E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger1_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger1_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger1_joint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="finger1_link1" />
+    <child
+      link="finger1_link2" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="finger1_link3">
+    <inertial>
+      <origin
+        xyz="0.013766687208351 0.042634841620998 -0.141716190014385"
+        rpy="0 0 0" />
+      <mass
+        value="0.00794708053376202" />
+      <inertia
+        ixx="1.11971182866769E-06"
+        ixy="2.12743517994856E-14"
+        ixz="1.73533623681992E-14"
+        iyy="1.06809021167734E-06"
+        iyz="-2.02591786363568E-07"
+        izz="3.23711488257813E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger1_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger1_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger1_joint3"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="finger1_link2" />
+    <child
+      link="finger1_link3" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="finger2_link1">
+    <inertial>
+      <origin
+        xyz="0.083049431210503 -0.0244494355767067 -0.0257944669556657"
+        rpy="0 0 0" />
+      <mass
+        value="0.0238775727238234" />
+      <inertia
+        ixx="7.38677639609293E-06"
+        ixy="-4.0255135766712E-08"
+        ixz="1.02569716598552E-07"
+        iyy="7.39269035635372E-06"
+        iyz="-2.16118778359794E-08"
+        izz="1.7480749422496E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger2_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger2_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger2_joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="gripper" />
+    <child
+      link="finger2_link1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="finger2_link2">
+    <inertial>
+      <origin
+        xyz="0.0865444294982386 -0.0275298851303443 -0.0889026899471862"
+        rpy="0 0 0" />
+      <mass
+        value="0.0146713430519987" />
+      <inertia
+        ixx="3.87859170385885E-06"
+        ixy="-9.21974418463456E-09"
+        ixz="-2.9012190520452E-07"
+        iyy="3.8797194892875E-06"
+        iyz="2.9337825010494E-07"
+        izz="7.68595391966041E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger2_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger2_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger2_joint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="finger2_link1" />
+    <child
+      link="finger2_link2" />
+    <axis
+      xyz="-0.671024903729848 -0.741434810738171 0" />
+  </joint>
+  <link
+    name="finger2_link3">
+    <inertial>
+      <origin
+        xyz="0.0978719410255936 -0.0377709371614447 -0.139580437314751"
+        rpy="0 0 0" />
+      <mass
+        value="0.0079470792779373" />
+      <inertia
+        ixx="1.0146802005153E-06"
+        ixy="-9.50572671330821E-08"
+        ixz="-2.625518275079E-07"
+        iyy="1.03368149555754E-06"
+        iyz="2.3761870865826E-07"
+        izz="4.63151561761389E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger2_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger2_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger2_joint3"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="finger2_link2" />
+    <child
+      link="finger2_link3" />
+    <axis
+      xyz="0.671024903729848 0.741434810738172 0" />
+  </joint>
+  <link
+    name="finger3_link1">
+    <inertial>
+      <origin
+        xyz="0.0410354178256927 0.0677269795720499 -0.0257944693019727"
+        rpy="0 0 0" />
+      <mass
+        value="0.0238775695949264" />
+      <inertia
+        ixx="7.42836288219166E-06"
+        ixy="1.1699019345914E-08"
+        ixz="-4.02432407065382E-08"
+        iyy="7.35110101456612E-06"
+        iyz="9.67892424185607E-08"
+        izz="1.74807485814263E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger3_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger3_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger3_joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="gripper" />
+    <child
+      link="finger3_link1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="finger3_link2">
+    <inertial>
+      <origin
+        xyz="0.0420610048958684 0.0758004637888678 -0.0882412379942026"
+        rpy="0 0 0" />
+      <mass
+        value="0.0146713443474274" />
+      <inertia
+        ixx="3.88494402639227E-06"
+        ixy="2.26286784048064E-08"
+        ixz="-1.22314680108474E-07"
+        iyy="3.74207626532473E-06"
+        iyz="-7.38383817522428E-07"
+        izz="8.99886105947787E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger3_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger3_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger3_joint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="finger3_link1" />
+    <child
+      link="finger3_link2" />
+    <axis
+      xyz="-0.991050835537461 0.133484985599509 0" />
+  </joint>
+  <link
+    name="finger3_link3">
+    <inertial>
+      <origin
+        xyz="0.0462124424477457 0.10668226750516 -0.11622567278574"
+        rpy="0 0 0" />
+      <mass
+        value="0.00794707983552394" />
+      <inertia
+        ixx="1.10463293549164E-06"
+        ixy="1.11951913011481E-07"
+        ixz="4.43939295355227E-09"
+        iyy="2.88531696255158E-07"
+        iyz="3.29598255363415E-08"
+        izz="1.11834876628532E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger3_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hand_pa10/meshes/finger3_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger3_joint3"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="finger3_link2" />
+    <child
+      link="finger3_link3" />
+    <axis
+      xyz="0.991050835537461 -0.133484985599507 0" />
+  </joint>
+</robot>

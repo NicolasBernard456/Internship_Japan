@@ -1,0 +1,6 @@
+<package>
+  <description brief="hand_pa10">hand_pa10</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>

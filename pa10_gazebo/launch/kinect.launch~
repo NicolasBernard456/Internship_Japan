@@ -1,0 +1,8 @@
+<launch>
+  <!-- Run a python script to the send a service call to gazebo_ros to spawn kinect -->
+  <node name="urdf_spawner2" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+      args="-sdf -model kinect -file /home/nicolas/.gazebo/models/kinect/model-1_4.sdf -x -1 -y -0.74 -z 0.15 -reference_frame link1 -robot_namespace /"/>
+  <node name="static_transform_publisher" pkg="tf" type="static_transform_publisher" args="-1 -0.74 0.15 -1.56 0 -1.560 link1 camera_link 100" />
+  <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="$(find pa10_gazebo)/rviz/kinect.rviz" output="screen"/>
+<!--   <node name="traitement" pkg="traitement_pcl" type="traitement" output="screen" /> -->
+</launch>

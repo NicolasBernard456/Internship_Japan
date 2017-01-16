@@ -1,0 +1,6 @@
+<package>
+  <description brief="dual_arm_pa10_description">dual_arm_pa10_description</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>

@@ -1,0 +1,14 @@
+/dual_arm_pa10/left_arm:
+  # Baxter SDK Controllers: Gripper --------------------------
+  gripper_controller:
+    type: baxter_sim_controllers/BaxterGripperController
+    #type: effort_controllers/GripperActionController
+    topic: /dual_arm_pa10/end_effector/left_gripper/command
+    properties: /dual_arm_pa10/end_effector/left_gripper/properties
+    joints:
+          gripper_left_joint_left:
+            joint: gripper_left_joint_left
+            pid: {p: 1000,  i: 0.1, d: 0.01}
+          gripper_left_joint_right:
+            joint: gripper_left_joint_right
+            pid: {p: 1000,  i: 0.1, d: 0.01}

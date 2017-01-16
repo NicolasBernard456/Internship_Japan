@@ -1,0 +1,361 @@
+<robot
+  name="PA-10">
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.000986433797446284 -0.000817535327653175 -1.04133393750554E-11"
+        rpy="0 0 0" />
+      <mass
+        value="7.94934697220915" />
+      <inertia
+        ixx="0.0510642767434423"
+        ixy="-0.000891049100773253"
+        ixz="3.65730202857334E-12"
+        iyy="0.0504677521912288"
+        iyz="1.39738812812236E-10"
+        izz="0.0536200422710813" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://PA-10/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://PA-10/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="-0.0617285640357165 -4.46977211302629E-07 -2.02885402304353E-08"
+        rpy="0 0 0" />
+      <mass
+        value="2.71192568839201" />
+      <inertia
+        ixx="0.0243201044735161"
+        ixy="2.57044757772359E-07"
+        ixz="-3.2309369661469E-06"
+        iyy="0.0264027108199814"
+        iyz="1.37537607062047E-07"
+        izz="0.0115437749210812" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://PA-10/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://PA-10/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="continuous">
+    <origin
+      xyz="-0.0018811 0 0.10209"
+      rpy="2.1378 1.5708 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="-0.094181274379144 -4.63765533788296E-06 0.00129755326031771"
+        rpy="0 0 0" />
+      <mass
+        value="4.68012900111117" />
+      <inertia
+        ixx="0.011384781756112"
+        ixy="-5.17494991257085E-07"
+        ixz="-1.63266437372498E-06"
+        iyy="0.0663254092196658"
+        iyz="5.70854111984348E-08"
+        izz="0.0640549775205778" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://PA-10/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://PA-10/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="continuous">
+    <origin
+      xyz="-0.1135 0 0"
+      rpy="3.1416 3.0531E-16 0.41835" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="-0.109018221203826 0.000175571593047485 0.00161002030587345"
+        rpy="0 0 0" />
+      <mass
+        value="2.3539959451965" />
+      <inertia
+        ixx="0.0145004053705959"
+        ixy="-9.20574357451834E-06"
+        ixz="-0.000264473779792253"
+        iyy="0.018913143036241"
+        iyz="-3.07295408252502E-06"
+        izz="0.00874731190324503" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://PA-10/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://PA-10/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="continuous">
+    <origin
+      xyz="-0.2825 0 0.0029999"
+      rpy="-0.18174 1.2062E-07 6.5638E-07" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="-0.0847859918312063 -1.41827960625784E-05 -0.0002042047160195"
+        rpy="0 0 0" />
+      <mass
+        value="2.05851442359338" />
+      <inertia
+        ixx="0.00292511622390553"
+        ixy="1.41784162912146E-06"
+        ixz="0.00060867951854864"
+        iyy="0.020909916742985"
+        iyz="1.12871901963483E-06"
+        izz="0.0201272225685895" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://PA-10/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://PA-10/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="continuous">
+    <origin
+      xyz="-0.16801 -1.7923E-05 0"
+      rpy="-3.1416 -1.1102E-16 -1.0484" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link6">
+    <inertial>
+      <origin
+        xyz="-0.00805272105966082 0.000110235624640742 0.00069149937940316"
+        rpy="0 0 0" />
+      <mass
+        value="1.37119764561499" />
+      <inertia
+        ixx="0.00333020297641962"
+        ixy="-7.8633755251471E-07"
+        ixz="-0.000117294966007319"
+        iyy="0.0117528447479912"
+        iyz="5.34812034426197E-09"
+        izz="0.00961712575206474" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://PA-10/meshes/link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://PA-10/meshes/link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="continuous">
+    <origin
+      xyz="-0.36824 0 -0.0020003"
+      rpy="-1.049 2.1649E-15 9.992E-16" />
+    <parent
+      link="link5" />
+    <child
+      link="link6" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="link7">
+    <inertial>
+      <origin
+        xyz="0.0312759039478299 0.00123419126834035 0.00086359769683747"
+        rpy="0 0 0" />
+      <mass
+        value="0.749475964810386" />
+      <inertia
+        ixx="0.000413239571105982"
+        ixy="-2.89936057339336E-05"
+        ixz="4.19297763029297E-06"
+        iyy="0.00379347775132525"
+        iyz="-5.2418695993306E-07"
+        izz="0.00378820414120642" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://PA-10/meshes/link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://PA-10/meshes/link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="continuous">
+    <origin
+      xyz="-0.13176 0.00011584 0"
+      rpy="-1.5708 -2.387E-15 2.7988" />
+    <parent
+      link="link6" />
+    <child
+      link="link7" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>

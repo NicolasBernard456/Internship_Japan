@@ -1,0 +1,15 @@
+pa10:
+
+  # Baxter SDK Controllers: Gripper --------------------------
+  gripper_controller:
+    type: baxter_sim_controllers/BaxterGripperController
+    #type: effort_controllers/GripperActionController
+    topic: /pa10/end_effector/left_gripper/command
+    properties: /pa10/end_effector/left_gripper/properties
+    joints:
+          left_prism:
+            joint: left_prism
+            pid: {p: 1000,  i: 0.1, d: 0.01}
+          right_prism:
+            joint: right_prism
+            pid: {p: 1000,  i: 0.1, d: 0.01}

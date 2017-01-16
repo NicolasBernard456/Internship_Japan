@@ -1,0 +1,50 @@
+controller_list:
+  - name: fake_left_arm_controller
+    joints:
+      - left_arm_joint2
+      - left_arm_joint3
+      - left_arm_joint4
+      - left_arm_joint5
+      - left_arm_joint6
+      - left_arm_joint7
+      - left_arm_joint8
+  - name: fake_right_arm_controller
+    joints:
+      - right_arm_joint2
+      - right_arm_joint3
+      - right_arm_joint4
+      - right_arm_joint5
+      - right_arm_joint6
+      - right_arm_joint7
+      - right_arm_joint8
+  - name: fake_gripper_right_controller
+    joints:
+      - right_arm_finger1_joint1
+      - right_arm_finger1_joint2
+      - right_arm_finger1_joint3
+      - right_arm_finger2_joint1
+      - right_arm_finger2_joint2
+      - right_arm_finger2_joint3
+      - right_arm_finger3_joint1
+      - right_arm_finger3_joint2
+      - right_arm_finger3_joint3
+  - name: fake_dual_arm_controller
+    joints:
+      - left_arm_joint2
+      - left_arm_joint3
+      - left_arm_joint4
+      - left_arm_joint5
+      - left_arm_joint6
+      - left_arm_joint7
+      - left_arm_joint8
+      - right_arm_joint2
+      - right_arm_joint3
+      - right_arm_joint4
+      - right_arm_joint5
+      - right_arm_joint6
+      - right_arm_joint7
+      - right_arm_joint8
+  - name: fake_gripper_left_controller
+    joints:
+      - gripper_left_joint_left
+      - gripper_left_joint_right

@@ -1,0 +1,2393 @@
+<robot
+  name="dual_arm_pa10">
+	
+<!-- Base_link dual arm PA10 -->
+	
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00480993508794382 -1.88509420682234 0.791724905525158"
+        rpy="0 0 0" />
+      <mass
+        value="97.6926992627204" />
+      <inertia
+        ixx="50.0942158701692"
+        ixy="3.17724917847428"
+        ixz="9.04164732112971"
+        iyy="46.4664597116147"
+        iyz="-5.27815108209278"
+        izz="19.8026464841161" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/base_link_coll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  
+<!--  Link PA10 arm left  -->
+  
+  <link
+    name="left_arm_link1">
+	   
+    <inertial>
+      <origin
+        xyz="-0.0990893449499566 -0.0028675568513179 -5.14186471178846E-11"
+        rpy="0 0 0" />
+      <mass
+        value="7.94934697459327" />
+      <inertia
+        ixx="0.0504677521814026"
+        ixy="-0.000891049131651244"
+        ixz="1.27920043481444E-10"
+        iyy="0.0510642767596363"
+        iyz="4.75166069685562E-11"
+        izz="0.0536200422642458" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link
+    name="left_arm_link2">
+	   
+    <inertial>
+      <origin
+        xyz="-0.264300715549731 -7.15055906728157E-05 -7.03775243744431E-05"
+        rpy="0 0 0" />
+      <mass
+        value="2.73095495934978" />
+      <inertia
+        ixx="0.0244689774772581"
+        ixy="-7.42118824132229E-06"
+        ixz="1.70322169879824E-06"
+        iyy="0.0213953227685144"
+        iyz="-0.00717334028268169"
+        izz="0.0167528907534615" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link
+    name="left_arm_link3">
+	   
+    <inertial>
+      <origin
+        xyz="-0.0437019902816687 -0.0638088021219101 0.069271467874256"
+        rpy="0 0 0" />
+      <mass
+        value="4.68020337607247" />
+      <inertia
+        ixx="0.0640552347544569"
+        ixy="-1.05763905615831E-06"
+        ixz="1.24457536945441E-06"
+        iyy="0.0411099869751615"
+        iyz="-0.0273775479092558"
+        izz="0.0366007171200103" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link
+    name="left_arm_link4">
+	   
+    <inertial>
+      <origin
+        xyz="0.0770136473833799 0.000871346209396995 0.00136007925481962"
+        rpy="0 0 0" />
+      <mass
+        value="2.3540667431701" />
+      <inertia
+        ixx="0.014502378632076"
+        ixy="0.000159299696318827"
+        ixz="0.000212338685622314"
+        iyy="0.0149084398366611"
+        iyz="0.00496672671864164"
+        izz="0.0127528937115759" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link
+    name="left_arm_link5">
+	   
+    <inertial>
+      <origin
+        xyz="0.0557957834519112 -0.0379144188373129 -0.0758364174887833"
+        rpy="0 0 0" />
+      <mass
+        value="2.05851456703555" />
+      <inertia
+        ixx="0.0201272248938986"
+        ixy="0.000271269049442124"
+        ixz="0.000544889679894761"
+        iyy="0.0173122643398697"
+        iyz="0.00719444295915488"
+        izz="0.00652277468352631" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <link
+    name="left_arm_link6">
+    <inertial>
+      <origin
+        xyz="-0.11479546488584 0.000402885351959092 0.000572717350250995"
+        rpy="0 0 0" />
+      <mass
+        value="1.37119768187811" />
+      <inertia
+        ixx="0.00333020305933528"
+        ixy="-5.22488915099865E-05"
+        ixz="-0.000105018147331423"
+        iyy="0.01134044265071"
+        iyz="0.000843030204793276"
+        izz="0.0100295283885227" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+   <link
+    name="left_arm_link7">
+    <inertial>
+      <origin
+        xyz="-0.00535247874737266 -0.00359545980310949 -0.0310805568908772"
+        rpy="0 0 0" />
+      <mass
+        value="0.749476039952976" />
+      <inertia
+        ixx="0.00379347793099343"
+        ixy="-3.60666870763432E-06"
+        ixz="-2.87731741528884E-05"
+        iyy="0.00372105352394753"
+        iyz="0.000471316831514314"
+        izz="0.000480390337421146" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/left_arm_link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  <link name ="left_arm_link8"/>
+  
+  <link name = "gripper"/>
+  
+  <link 
+    name="gripper2"> 
+    <inertial> 
+      <origin 
+        xyz="0 7.27408835842214E-05 -2.77311286391718E-05" 
+        rpy="0 0 0" /> 
+      <mass 
+        value="0.318111544829444" /> 
+      <inertia 
+        ixx="0.000238894475405689" 
+        ixy="-9.95010231447356E-08" 
+        ixz="3.79329413750036E-08" 
+        iyy="0.000276504500502102" 
+        iyz="-3.00174602631607E-07" 
+        izz="0.000227584548635218" /> 
+    </inertial> 
+    <visual> 
+      <origin 
+        xyz="0 0 0" 
+        rpy="0 0 0" /> 
+      <geometry> 
+        <mesh 
+          filename="package://dual_arm_pa10_description/meshes/gripper_f.STL" /> 
+      </geometry> 
+      <material 
+        name=""> 
+        <color 
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" /> 
+      </material> 
+    </visual> 
+    <collision> 
+      <origin 
+        xyz="0 0 0" 
+        rpy="0 0 0" /> 
+      <geometry> 
+        <mesh 
+          filename="package://dual_arm_pa10_description/meshes/gripper_f.STL" /> 
+      </geometry> 
+    </collision> 
+  </link>
+  
+  
+<link
+    name="gripper_left_finger_left">
+	
+   
+    <inertial>
+      <origin
+        xyz="-0.00749999999999984 0.0191263593375395 -0.000239195420437932"
+        rpy="0 0 0" />
+      <mass
+        value="0.0168898172009748" />
+      <inertia
+        ixx="3.30140945222578E-06"
+        ixy="-1.45583787809333E-21"
+        ixz="6.08804930839028E-22"
+        iyy="1.52846665341063E-06"
+        iyz="9.47618109740749E-21"
+        izz="2.38014886911172E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/gripper_left_finger_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/gripper_left_finger_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  
+  <link
+    name="gripper_left_finger_right">
+	  
+   
+    <inertial>
+      <origin
+        xyz="0.00750000000000006 0.0191263593375388 -0.000239195420437488"
+        rpy="0 0 0" />
+      <mass
+        value="0.0168898172009748" />
+      <inertia
+        ixx="3.30140945222578E-06"
+        ixy="-1.70730078430945E-21"
+        ixz="1.21760986167806E-21"
+        iyy="1.52846665341063E-06"
+        iyz="9.68793933422106E-21"
+        izz="2.38014886911172E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/gripper_left_finger_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/gripper_left_finger_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+<!--  joint left arm pa10  -->
+  
+  <joint
+    name="left_arm_joint1"
+    type="fixed">
+    <origin
+      xyz="0.507621418725904 -1.82100573563922 1.62389631575534"
+      rpy="0 -0.785398163397443 -2.88335101905768" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_arm_link1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  
+  <joint
+    name="left_arm_joint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0.81 -2.77555756156289E-17 -6.93889390390723E-17" />
+    <parent
+      link="left_arm_link1" />
+    <child
+      link="left_arm_link2" />
+    <axis
+      xyz="1 0 0" />
+            <limit
+      upper="3.08823"
+      lower="-3.08823" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+   
+  <joint
+    name="left_arm_joint3"
+    type="revolute">
+    <origin
+      xyz="-0.315500000000002 -0.0265228088786378 0.0363530000028649"
+      rpy="0.679504721422882 -0.940482442690304 -1.5707963267949" />
+    <parent
+      link="left_arm_link2" />
+    <child
+      link="left_arm_link3" />
+    <axis
+      xyz="-1 0 0" />
+            <limit
+      upper="1.58725" 
+      lower="-1.58725" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  
+  <joint
+    name="left_arm_joint4"
+    type="revolute">
+    <origin
+      xyz="-0.0420000000000007 -0.213066339698667 0.231329852873212"
+      rpy="-0.86 -0.826472415536946 -1.5707963267949" />
+    <parent
+      link="left_arm_link3" />
+    <child
+      link="left_arm_link4" />
+    <axis
+      xyz="-1 0 0" />
+            <limit
+      upper="3.03587" 
+      lower="-3.03587"
+      effort="10000"
+      velocity="10" />
+  </joint>
+  
+  <joint
+    name="left_arm_joint5"
+    type="revolute">
+    <origin
+      xyz="0.136002290415427 0.035150512356696 0.0435940570071716"
+      rpy="1.99 0.89253909633178 -1.57079632679489" />
+    <parent
+      link="left_arm_link4" />
+    <child
+      link="left_arm_link5" />
+    <axis
+      xyz="-1 0 0" />
+        <limit
+      upper="2.3901" 
+     lower="-2.3901" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  
+  <joint
+    name="left_arm_joint6"
+    type="revolute">
+    <origin
+      xyz="0.0539997253029849 -0.11697622382484 -0.233877997382656"
+      rpy="-1.00442971146016 -1.10702148743825 1.5707963267949" />
+    <parent
+      link="left_arm_link5" />
+    <child
+      link="left_arm_link6" />
+    <axis
+      xyz="-1 0 0" />
+            <limit
+      upper="4.44059"
+      lower="-4.44059" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  
+  <joint
+    name="left_arm_joint7"
+    type="revolute">
+    <origin
+      xyz="-0.238499999999999 0.00191374141050482 0.00364846570489141"
+      rpy="-1.45 -1.11583611356585 1.57079632679488" />
+    <parent
+      link="left_arm_link6" />
+    <child
+      link="left_arm_link7" />
+    <axis
+      xyz="-1 0 0" />
+            <limit
+      upper="2.5979"
+      lower="-2.5979" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+
+  <joint
+    name="left_arm_joint8"
+    type="revolute">
+    <origin
+      xyz="-0.00411828717799878 0.0267506844360853 0.186087179790034"
+      rpy="1.46105289658605 0.0915142366651312 0.692402659639599" />
+    <parent
+      link="left_arm_link7" />
+    <child
+      link="left_arm_link8" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      upper="3.14"
+      lower="-3.14" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  
+    <joint
+    name="left_arm_joint9"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_arm_link8" />
+    <child
+      link="gripper2" />
+  </joint>
+
+  <joint
+    name="gripper_left_joint_left"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="1.11022302462516E-16 2.77555756156289E-17 0" />
+    <parent
+      link="gripper2" />
+    <child
+      link="gripper_left_finger_left" />
+    <axis
+      xyz="-1 0 0" />
+     <limit
+      effort="100"
+      velocity="0"
+      upper="0.015"
+      lower="-0.015" />
+  </joint>
+  
+  <joint
+    name="gripper_left_joint_right"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="1.11022302462516E-16 2.77555756156289E-17 0" />
+    <parent
+      link="gripper2" />
+    <child
+      link="gripper_left_finger_right" />
+    <axis
+      xyz="-1 0 0" />
+     <limit
+      effort="100"
+      velocity="0"
+      upper="0.015"
+      lower="-0.015" />
+  </joint>
+  
+  <joint name = "fixed_gripper" type = "fixed">
+	<origin 
+		xyz ="0 0 0"
+		rpy="0 0 1.56"/>
+	  <parent 
+		  link = "gripper2"/>
+	  <child 
+		  link = "gripper"/>
+  </joint>
+  
+  
+  
+<!--  Right arm links PA10  -->
+  
+  
+  <link
+    name="right_arm_link1">
+	  
+   
+    <inertial>
+      <origin
+        xyz="-0.0990893449499568 -0.00286755685131812 -5.14186471178846E-11"
+        rpy="0 0 0" />
+      <mass
+        value="7.94934697459327" />
+      <inertia
+        ixx="0.0504677521814026"
+        ixy="-0.000891049131651264"
+        ixz="1.27920058226594E-10"
+        iyy="0.0510642767596364"
+        iyz="4.75166867658361E-11"
+        izz="0.0536200422642459" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  
+  <link
+    name="right_arm_link2">
+	  
+   
+    <inertial>
+      <origin
+        xyz="-0.26430078576359 5.5395456808327E-06 -0.000100120550968308"
+        rpy="0 0 0" />
+      <mass
+        value="2.73096064577531" />
+      <inertia
+        ixx="0.0244690084324752"
+        ixy="-6.16591837397824E-06"
+        ixz="-4.45204426263203E-06"
+        iyy="0.0116656890506434"
+        iyz="-0.00139997461375321"
+        izz="0.0264825978692218" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+
+  
+  <link
+    name="right_arm_link3">
+	  
+   
+    <inertial>
+      <origin
+        xyz="-0.043702005578881 -0.090401693031238 0.0264126444841203"
+        rpy="0 0 0" />
+      <mass
+        value="4.68020240384894" />
+      <inertia
+        ixx="0.0640552172482369"
+        ixy="-1.53619565706423E-06"
+        ixz="5.24694524367715E-07"
+        iyy="0.0157079072556859"
+        iyz="-0.0147922025516611"
+        izz="0.0620027657982079" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+
+  
+  <link
+    name="right_arm_link4">
+	  
+   
+    <inertial>
+      <origin
+        xyz="-0.0770138451003759 -0.00161193273810367 -0.000125751938630847"
+        rpy="0 0 0" />
+      <mass
+        value="2.35401507523885" />
+      <inertia
+        ixx="0.0145020232118894"
+        ixy="0.000262355464902327"
+        ixz="4.01548601820139E-05"
+        iyy="0.00909875065584951"
+        iyz="0.00185468162491554"
+        izz="0.0185621935328941" />
+
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+      
+  <link
+    name="right_arm_link5">
+	  
+   
+    <inertial>
+      <origin
+        xyz="-0.0487042069737162 -0.0766373323514082 0.0362682906169793"
+        rpy="0 0 0" />
+      <mass
+        value="2.05851465800913" />
+      <inertia
+        ixx="0.0201272258099083"
+        ixy="0.000550620033272202"
+        ixz="-0.000259442925847235"
+        iyy="0.00621722042355472"
+        iyz="-0.00695484682515333"
+        izz="0.0176178173930546" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_arm_link6">
+	  
+   
+    <inertial>
+      <origin
+        xyz="-0.123795466877962 -0.000332575422462789 0.000616238682792758"
+        rpy="0 0 0" />
+      <mass
+        value="1.37119764560828" />
+      <inertia
+        ixx="0.00333020297641547"
+        ixy="7.06016508965639E-05"
+        ixz="-9.36703489410525E-05"
+        iyy="0.0109653192543875"
+        iyz="-0.00103040611090879"
+        izz="0.0104046512455929" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+   <link
+    name="right_arm_link7">
+	  
+   
+    <inertial>
+      <origin
+        xyz="-0.014234191618073 0.0146115535383847 -0.027666424709035"
+        rpy="0 0 0" />
+      <mass
+        value="0.749476071274831" />
+      <inertia
+        ixx="0.00379347796542419"
+        ixy="1.32974134677653E-05"
+        ixz="-2.57698088367669E-05"
+        iyy="0.00312427872471845"
+        iyz="-0.0013416204873178"
+        izz="0.00107716514804889" />     
+      
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+   <link name="right_arm_link8"/>
+  
+  <link
+    name="right_arm_base_hand">
+	  
+   
+    <inertial>
+      <origin
+        xyz="0.0418091045929514 0.00191798166981871 0.00433739198776051"
+        rpy="0 0 0" />
+      <mass
+        value="0.430073369142988" />
+      <inertia
+        ixx="0.000343341303406941"
+        ixy="2.53348472786522E-05"
+        ixz="5.81308793866753E-05"
+        iyy="0.0006027164783059"
+        iyz="1.96121238200981E-05"
+        izz="0.000569612147015965" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_base_hand.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_base_hand.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+<!--  Right arm joint PA10  -->
+  
+  
+  <joint
+    name="right_arm_joint1"
+    type="fixed">
+    <origin
+      xyz="0.191984660943271 -2.36324029739934 1.62389631575577"
+      rpy="1.5707963267949 -0.785398163397444 1.82903796132701" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_arm_link1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  
+  <joint
+    name="right_arm_joint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.70 0 -5.55111512312578E-17" />
+    <parent
+      link="right_arm_link1" />
+    <child
+      link="right_arm_link2" />
+    <axis
+      xyz="-1 0 0" />
+            <limit
+      upper="3.08823"
+      lower="-3.08823" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  
+  <joint
+    name="right_arm_joint3"
+    type="revolute">
+    <origin
+      xyz="-0.315500000000001 -0.0448097183696872 0.00413390126275653"
+      rpy="0.260 -0.0919909520685004 -1.5707963267949" />
+    <parent
+      link="right_arm_link2" />
+    <child
+      link="right_arm_link3" />
+    <axis
+      xyz="-1 0 0" />
+            <limit
+      upper="1.58725" 
+      lower="-1.58725" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  <joint
+    name="right_arm_joint4"
+    type="revolute">
+    <origin
+      xyz="-0.0419999999999989 -0.301875598140907 0.0882150168055255"
+      rpy="-0.3 0.284306822214236 1.5707963267949" />
+    <parent
+      link="right_arm_link3" />
+    <child
+      link="right_arm_link4" />
+    <axis
+      xyz="-1 0 0" />
+            <limit
+      upper="3.03587" 
+      lower="-3.03587"
+      effort="10000"
+      velocity="10" />
+  </joint>
+  <joint
+    name="right_arm_joint5"
+    type="revolute">
+    <origin
+      xyz="-0.136002290415432 0.0476625282866143 0.00897405831329179"
+      rpy="-2.64511707232048 -0.186476411880821 1.5707963267949" />
+    <parent
+      link="right_arm_link4" />
+    <child
+      link="right_arm_link5" />
+    <axis
+      xyz="-1 0 0" />
+        <limit
+      upper="2.3901" 
+     lower="-2.3901" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  
+  <joint
+    name="right_arm_joint6"
+    type="revolute">
+    <origin
+      xyz="-0.0505 -0.228214601249627 0.108048353881556"
+      rpy="0.85944656681236 0.442183377058992 1.5707963267949" />
+    <parent
+      link="right_arm_link5" />
+    <child
+      link="right_arm_link6" />
+    <axis
+      xyz="-1 0 0" />
+            <limit
+      upper="4.44059"
+      lower="-4.44059" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+ 
+  <joint
+    name="right_arm_joint7"
+    type="revolute">
+    <origin
+      xyz="-0.247500000000001 -0.0078023590589269 0.0103989556550788"
+      rpy="1.077475833995264 -0.918211868949171 -1.57079632679489" />
+    <parent
+      link="right_arm_link6" />
+    <child
+      link="right_arm_link7" />
+    <axis
+      xyz="-1 0 0" />
+            <limit
+      upper="2.87979"
+      lower="-2.87979" 
+      effort="10000"
+      velocity="10" />
+  </joint>
+  
+  
+  
+ 
+  <joint
+    name="right_arm_joint8"
+    type="revolute">
+    <origin
+      xyz="-0.0130000046830103 -0.0349511567610573 0.0708479408778211"
+      rpy="0 -1.11250174568969 -1.5707963267949" />
+    <parent
+      link="right_arm_link7" />
+    <child
+      link="right_arm_link8" />
+    <axis
+      xyz="-1 0 0" />
+        <limit
+      upper="3.14"
+      lower="-3.14" 
+      effort="10000"
+      velocity="10" />
+    </joint>
+  
+  
+  <joint
+    name="right_hand_joint9"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_arm_link8" />
+    <child
+      link="right_arm_base_hand" />
+  </joint>
+  
+  
+  
+  
+<!--  Hand  -->
+  
+  
+  <link
+    name="right_arm_finger1_link1">
+	  
+   
+    <inertial>
+      <origin
+        xyz="0.0081351877408502 0.0296330982820245 -0.0105111297374263"
+        rpy="0 0 0" />
+      <mass
+        value="0.0228985291732181" />
+      <inertia
+        ixx="1.69722463706739E-06"
+        ixy="9.98223062670238E-08"
+        ixz="-3.54076872241268E-08"
+        iyy="6.48801634142352E-06"
+        iyz="-3.52797092036644E-08"
+        izz="6.57440348923908E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger1_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger1_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_finger1_joint1"
+    type="revolute">
+    <origin
+      xyz="0.071700010850916 0.0263382298732273 0.00341401325625978"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="right_arm_base_hand" />
+    <child
+      link="right_arm_finger1_link1" />
+    <axis
+      xyz="-1 0 0" />
+    <limit upper="0.85" lower="-2.29" velocity="1.37" effort="7"/>
+  </joint>
+  <link
+    name="right_arm_finger1_link2">
+	  
+   
+    <inertial>
+      <origin
+        xyz="0.00296901019103424 -0.00867393324607268 -0.028991742539537"
+        rpy="0 0 0" />
+      <mass
+        value="0.0140696992771142" />
+      <inertia
+        ixx="3.39016869801563E-06"
+        ixy="-4.14466658774013E-09"
+        ixz="-4.70091214696795E-09"
+        iyy="3.18279822437385E-06"
+        iyz="7.50504842731485E-07"
+        izz="9.16641948850699E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger1_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger1_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_finger1_joint2"
+    type="revolute">
+    <origin
+      xyz="-0.0250000021643526 0.0311618210269766 -0.00787024408465131"
+      rpy="-1.14854300382443 1.22993247879784 -1.57079632679488" />
+    <parent
+      link="right_arm_finger1_link1" />
+    <child
+      link="right_arm_finger1_link2" />
+    <axis
+      xyz="-1 0 0" />
+<limit upper="1.56" lower="-1.56" velocity="1.37" effort="7"/>
+  </joint>
+  <link
+    name="right_arm_finger1_link3">
+	  
+   
+    <inertial>
+      <origin
+        xyz="-0.000909999960181151 0.00173665168836645 0.0239420068539111"
+        rpy="0 0 0" />
+      <mass
+        value="0.00794708006244692" />
+      <inertia
+        ixx="1.11971181150284E-06"
+        ixy="-2.82120326182396E-14"
+        ixz="-2.92793178420851E-14"
+        iyy="1.11522009455067E-06"
+        iyz="6.11531168401545E-08"
+        izz="2.76581570667571E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger1_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger1_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_finger1_joint3"
+    type="revolute">
+    <origin
+      xyz="0.00209000000000442 -0.0175910548126128 -0.0586700542149021"
+      rpy="2.796792654 3.09752223870419E-14 -3.14159265358978" />
+    <parent
+      link="right_arm_finger1_link2" />
+    <child
+      link="right_arm_finger1_link3" />
+    <axis
+      xyz="-1 0 0" />
+        <limit upper="0.89" lower="-2.25" velocity="1.37" effort="7"/>
+  </joint>
+  <link
+    name="right_arm_finger2_link1">
+	  
+   
+    <inertial>
+      <origin
+        xyz="-0.00263518774085103 -0.00810872271693919 -0.0303784953223321"
+        rpy="0 0 0" />
+      <mass
+        value="0.0228985291732181" />
+      <inertia
+        ixx="1.69722463706739E-06"
+        ixy="2.7315271717921E-08"
+        ixz="1.0233314748414E-07"
+        iyy="6.57964950524914E-06"
+        iyz="2.76396244007523E-08"
+        izz="6.48277032541349E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger2_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger2_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_finger2_joint1"
+    type="revolute">
+    <origin
+      xyz="0.0662000108509164 -0.0102127198225164 -0.0245149694738578"
+      rpy="0 0 -1.11022302462516E-16" />
+    <parent
+      link="right_arm_base_hand" />
+    <child
+      link="right_arm_finger2_link1" />
+    <axis
+      xyz="-1 0 0" />
+        <limit upper="1.44" lower="-1.70" velocity="1.37" effort="7"/>
+  </joint>
+  <link
+    name="right_arm_finger2_link2">
+	  
+   
+    <inertial>
+      <origin
+        xyz="0.00296900764519803 -0.028884612242787 0.00902428048762349"
+        rpy="0 0 0" />
+      <mass
+        value="0.0140697000964191" />
+      <inertia
+        ixx="3.39016821344967E-06"
+        ixy="-4.65045170225343E-09"
+        ixz="4.20119946412091E-09"
+        iyy="9.35144491416045E-07"
+        iyz="-7.77717705339412E-07"
+        izz="3.16429568009057E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger2_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger2_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_finger2_joint2"
+    type="revolute">
+    <origin
+      xyz="0.0305 -0.0111511248338205 -0.0301438618173943"
+      rpy="0.547054820123972 0.260841791582996 1.5707963267949" />
+    <parent
+      link="right_arm_finger2_link1" />
+    <child
+      link="right_arm_finger2_link2" />
+    <axis
+      xyz="-1 0 0" />
+        <limit upper="1.56" lower="-1.56" velocity="1.37" effort="7"/>
+  </joint>
+  <link
+    name="right_arm_finger2_link3">
+	  
+   
+    <inertial>
+      <origin
+        xyz="-0.00091000051118395 -0.0116719673911851 0.0209761953926275"
+        rpy="0 0 0" />
+      <mass
+        value="0.00794708120703288" />
+      <inertia
+        ixx="1.11971189476503E-06"
+        ixy="-3.10048813118644E-14"
+        ixz="2.88203015889813E-15"
+        iyy="9.19285829403765E-07"
+        iyz="-3.60093804274701E-07"
+        izz="4.72515959059998E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger2_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger2_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_finger2_joint3"
+    type="revolute">
+    <origin
+      xyz="0.00209000000000215 -0.058452793308474 0.0183000449788908"
+      rpy="4.701592654 -7.52176099183544E-15 -3.14159265358978" />
+    <parent
+      link="right_arm_finger2_link2" />
+    <child
+      link="right_arm_finger2_link3" />
+    <axis
+      xyz="-1 0 0" />
+        <limit upper="1.56" lower="-1.56" velocity="1.37" effort="7"/>
+  </joint>
+  <link
+    name="right_arm_finger3_link1">
+	  
+   
+    <inertial>
+      <origin
+        xyz="0.00263518774085059 -0.0120912294344 0.0290242404364676"
+        rpy="0 0 0" />
+      <mass
+        value="0.0228985291732181" />
+      <inertia
+        ixx="1.69722463706739E-06"
+        ixy="-4.0730761577233E-08"
+        ixz="9.77711726654359E-08"
+        iyy="6.57061037434248E-06"
+        iyz="-3.94708314850979E-08"
+        izz="6.49180945631999E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger3_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger3_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_finger3_joint1"
+    type="revolute">
+    <origin
+      xyz="0.0662000108509164 -0.0161244535207834 0.0211035728601622"
+      rpy="3.14159265358979 -1.11022302462516E-16 -3.14159265358979" />
+    <parent
+      link="right_arm_base_hand" />
+    <child
+      link="right_arm_finger3_link1" />
+    <axis
+      xyz="-1 0 0" />
+        <limit upper="-0.0351" lower="-3.1751" velocity="1.37" effort="7"/>
+  </joint>
+  <link
+    name="right_arm_finger3_link2">
+	  
+   
+    <inertial>
+      <origin
+        xyz="0.00296900774984721 -0.0248767132515548 0.0172310076654409"
+        rpy="0 0 0" />
+      <mass
+        value="0.0140697008191643" />
+      <inertia
+        ixx="3.39016825385727E-06"
+        ixy="-3.18516549583018E-09"
+        ixz="5.39733058787981E-09"
+        iyy="1.57649642010441E-06"
+        iyz="-1.27404198559063E-06"
+        izz="2.52294385650324E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger3_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger3_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="right_arm_finger3_joint2"
+    type="revolute">
+    <origin
+      xyz="-0.0305000021643527 -0.0150750850213071 0.0283855886546281"
+      rpy="-2.40426929457614 -0.394726401099013 1.5707963267949" />
+    <parent
+      link="right_arm_finger3_link1" />
+    <child
+      link="right_arm_finger3_link2" />
+    <axis
+      xyz="-1 0 0" />
+        <limit upper="1.56" lower="-1.56" velocity="1.37" effort="7"/>
+  </joint>
+  
+  <link
+    name="right_arm_finger3_link3">
+    <inertial>
+      <origin
+        xyz="-0.000909999280165108 -0.0212019082497008 -0.0112567677994688"
+        rpy="0 0 0" />
+      <mass
+        value="0.00794707869949347" />
+      <inertia
+        ixx="1.11971166848433E-06"
+        ixy="9.31667685052039E-14"
+        ixz="1.90445839922082E-14"
+        iyy="4.58513880294662E-07"
+        iyz="3.51021036569733E-07"
+        izz="9.33287590666055E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger3_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dual_arm_pa10_description/meshes/right_arm_finger3_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="right_arm_finger3_joint3"
+    type="revolute">
+    <origin
+      xyz="0.00209000000000237 -0.0503308320173415 0.0349059854386304"
+      rpy="3.14159265358977 -1.36834987785051E-14 -3.14159265358978" />
+    <parent
+      link="right_arm_finger3_link2" />
+    <child
+      link="right_arm_finger3_link3" />
+    <axis
+      xyz="-1 0 0" />
+        <limit upper="1.56" lower="-1.56" velocity="1.37" effort="7"/>
+  </joint>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+<!--Transmission left_arm    -->
+  
+  <transmission name="transmission_left_arm_joint2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_arm_joint2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_left_arm2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="transmission_left_arm_joint3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_arm_joint3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_left_arm3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="transmission_left_arm_joint4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_arm_joint4">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_left_arm4">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="transmission_left_arm_joint5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_arm_joint5">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_left_arm5">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="transmission_left_arm_joint6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_arm_joint6">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_left_arm6">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="transmission_left_arm_joint7">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_arm_joint7">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_left_arm7">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+    <transmission name="transmission_left_arm_joint8">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_arm_joint8">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_left_arm8">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+    <transmission name="transmission_gripper_left_joint_left">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="gripper_left_joint_left">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_left_joint_left">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+<transmission name="transmission_left_joint_right">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="gripper_left_joint_right">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_left_joint_right">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  
+  
+<!-- Plugin ROS left_arm   -->
+  
+  <gazebo>
+    <plugin name="gazebo_ros_control_left" filename="libgazebo_ros_control.so">
+      <robotNamespace>/dual_arm_pa10/left_arm</robotNamespace>
+<!--       <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType> -->
+    </plugin>
+</gazebo>
+
+
+  <!-- contact sensor left_arm gripper -->
+
+  <gazebo reference = "gripper2">
+    <sensor name='contact_gripper' type='contact'>
+	<plugin name="plugin_contact_gripper" filename="libcontact.so"/>
+	<contact>
+		<collision>gripper2_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+
+
+<gazebo reference="gripper_left_finger_right">
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <mu1>100.0</mu1>
+  <mu2>100.0</mu2>
+  <minDepth>0.001</minDepth>
+  
+  <sensor name='contact_finger_right' type='contact'>
+	<plugin name="plugin_contact_finger_right" filename="libcontact.so"/>
+	<contact>
+		<collision>gripper_left_finger_right_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+
+<gazebo reference="gripper_left_finger_left">
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <mu1>100.0</mu1>
+  <mu2>100.0</mu2>
+  <minDepth>0.001</minDepth>
+    <sensor name='contact_finger_left' type='contact'>
+	<plugin name="plugin_contact_finger_left" filename="libcontact.so"/>
+	<contact>
+		<collision>gripper_left_finger_left_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+
+
+
+
+
+
+
+
+
+
+<!--Transmission right_arm    -->
+
+  <transmission name="transmission_right_arm_joint2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_joint2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="transmission_right_arm_joint3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_joint3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="transmission_right_arm_joint4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_joint4">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm4">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="transmission_right_arm_joint5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_joint5">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm5">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="transmission_right_arm_joint6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_joint6">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm6">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="transmission_right_arm_joint7">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_joint7">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm7">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  
+  
+  <transmission name="transmission_right_arm_joint8">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_joint8">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm_joint8">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  
+    <transmission name="transmission_right_arm_finger1_joint1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_finger1_joint1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm_finger1_joint1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="transmission_right_arm_finger1_joint2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_finger1_joint2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm_finger1_joint2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>   
+  
+  <transmission name="transmission_right_arm_finger1_joint3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_finger1_joint3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm_finger1_joint3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+      <transmission name="transmission_right_arm_finger2_joint1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_finger2_joint1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm_finger2_joint1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="transmission_right_arm_finger2_joint2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_finger2_joint2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm_finger2_joint2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>   
+  
+  <transmission name="transmission_right_arm_finger2_joint3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_finger2_joint3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm_finger2_joint3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+      <transmission name="transmission_right_arm_finger3_joint1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_finger3_joint1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm_finger3_joint1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="transmission_right_arm_finger3_joint2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_finger3_joint2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm_finger3_joint2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>   
+  
+  <transmission name="transmission_right_arm_finger3_joint3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_arm_finger3_joint3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_right_arm_finger3_joint3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  
+<!--  plugin ROS right arm  -->
+<gazebo>
+    <plugin name="gazebo_ros_control_right" filename="libgazebo_ros_control.so">
+      <robotNamespace>/dual_arm_pa10/right_arm</robotNamespace>
+<!--       <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType> -->
+    </plugin>
+</gazebo>
+
+
+  <gazebo reference = "right_arm_base_hand">
+    <sensor name='contact_right_arm_base_hand' type='contact'>
+	<plugin name="plugin_contact_right_arm_base_hand" filename="libcontact.so"/>
+	<contact>
+		<collision>right_arm_base_hand_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+
+<gazebo reference="right_arm_finger1_link1">
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <mu1>100.0</mu1>
+  <mu2>100.0</mu2>
+  <minDepth>0.001</minDepth>
+    <sensor name='contact_right_arm_finger1_link1' type='contact'>
+	<plugin name="plugin_contact_right_arm_finger1_link1" filename="libcontact.so"/>
+	<contact>
+		<collision>right_arm_finger1_link1_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+
+<gazebo reference="right_arm_finger1_link2">
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <mu1>100.0</mu1>
+  <mu2>100.0</mu2>
+  <minDepth>0.001</minDepth>
+    <sensor name='contact_right_arm_finger1_link2' type='contact'>
+	<plugin name="plugin_contact_right_arm_finger1_link2" filename="libcontact.so"/>
+	<contact>
+		<collision>right_arm_finger1_link2_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+
+<gazebo reference="right_arm_finger1_link3">
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <mu1>100.0</mu1>
+  <mu2>100.0</mu2>
+  <minDepth>0.001</minDepth>
+    <sensor name='contact_right_arm_finger1_link3' type='contact'>
+	<plugin name="plugin_contact_right_arm_finger1_link3" filename="libcontact.so"/>
+	<contact>
+		<collision>right_arm_finger1_link3_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+
+<gazebo reference="right_arm_finger2_link1">
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <mu1>100.0</mu1>
+  <mu2>100.0</mu2>
+  <minDepth>0.001</minDepth>
+    <sensor name='contact_right_arm_finger2_link1' type='contact'>
+	<plugin name="plugin_contact_right_arm_finger2_link1" filename="libcontact.so"/>
+	<contact>
+		<collision>right_arm_finger2_link1_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+
+<gazebo reference="right_arm_finger2_link2">
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <mu1>100.0</mu1>
+  <mu2>100.0</mu2>
+  <minDepth>0.001</minDepth>
+    <sensor name='contact_right_arm_finger2_link2' type='contact'>
+	<plugin name="plugin_contact_right_arm_finger2_link2" filename="libcontact.so"/>
+	<contact>
+		<collision>right_arm_finger2_link2_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+
+<gazebo reference="right_arm_finger2_link3">
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <mu1>100.0</mu1>
+  <mu2>100.0</mu2>
+  <minDepth>0.001</minDepth>
+    <sensor name='contact_right_arm_finger2_link3' type='contact'>
+	<plugin name="plugin_contact_right_arm_finger2_link3" filename="libcontact.so"/>
+	<contact>
+		<collision>right_arm_finger2_link3_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+
+<gazebo reference="right_arm_finger3_link1">
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <mu1>100.0</mu1>
+  <mu2>100.0</mu2>
+  <minDepth>0.001</minDepth>
+    <sensor name='contact_right_arm_finger3_link1' type='contact'>
+	<plugin name="plugin_contact_right_arm_finger3_link1" filename="libcontact.so"/>
+	<contact>
+		<collision>right_arm_finger3_link1_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+
+<gazebo reference="right_arm_finger3_link2">
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <mu1>100.0</mu1>
+  <mu2>100.0</mu2>
+  <minDepth>0.001</minDepth>
+    <sensor name='contact_right_arm_finger3_link2' type='contact'>
+	<plugin name="plugin_contact_right_arm_finger3_link2" filename="libcontact.so"/>
+	<contact>
+		<collision>right_arm_finger3_link2_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+
+<gazebo reference="right_arm_finger3_link3">
+  <kp>1000000.0</kp>
+  <kd>100.0</kd>
+  <mu1>100.0</mu1>
+  <mu2>100.0</mu2>
+  <minDepth>0.001</minDepth>
+    <sensor name='contact_right_arm_finger3_link3' type='contact'>
+	<plugin name="plugin_contact_right_arm_finger3_link3" filename="libcontact.so"/>
+	<contact>
+		<collision>right_arm_finger3_link3_collision</collision>
+	</contact>
+  </sensor>
+</gazebo>
+
+
+
+
+
+
+<!-- Fake joint to fix the robot to the ground -->
+
+<link name = "world"/>
+      <!--To fixe the bqse of the robot-->
+  <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+  
+<!--  Plugin to fix grasping issues  -->
+  
+  <gazebo>
+   <plugin name="gazebo_grasp_fix" filename="libgazebo_grasp_fix.so">
+        <arm>
+           <arm_name>left_arm</arm_name>
+           <palm_link> left_arm_link8 </palm_link>
+           <gripper_link> gripper_left_finger_right </gripper_link>
+           <gripper_link> gripper_left_finger_left </gripper_link>
+        </arm>
+	 <arm>
+           <arm_name>right_arm</arm_name>
+           <palm_link> right_arm_link8 </palm_link>
+           <gripper_link> right_arm_finger1_link1 </gripper_link>
+           <gripper_link> right_arm_finger1_link2 </gripper_link>
+	   <gripper_link> right_arm_finger1_link3 </gripper_link>
+	   <gripper_link> right_arm_finger2_link1 </gripper_link>
+           <gripper_link> right_arm_finger2_link2 </gripper_link>
+	   <gripper_link> right_arm_finger2_link3 </gripper_link>
+	   <gripper_link> right_arm_finger3_link1 </gripper_link>
+           <gripper_link> right_arm_finger3_link2 </gripper_link>
+	   <gripper_link> right_arm_finger3_link3 </gripper_link>
+        </arm>
+       <forces_angle_tolerance>100</forces_angle_tolerance>
+       <update_rate>4</update_rate>
+       <grip_count_threshold>4</grip_count_threshold>
+       <max_grip_count>8</max_grip_count>
+       <release_tolerance>0.005</release_tolerance>
+       <disable_collisions_on_attach>false</disable_collisions_on_attach>
+       <contact_topic>__default_topic__</contact_topic>
+    </plugin>
+</gazebo>
+
+
+
+
+
+
+<!-- Enable self collision for every links -->
+ <gazebo reference = "left_arm_link1">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+  <gazebo reference = "gripper_left_finger_left">
+	 <self_collide>true</self_collide>
+ </gazebo>
+  <gazebo reference = "gripper_left_finger_right">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+
+ <gazebo reference = "left_arm_link2">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "left_arm_link3">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "left_arm_link4">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "left_arm_link5">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "left_arm_link6">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "left_arm_link7">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "gripper2">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "base_link">
+	 <self_collide>true</self_collide>
+ </gazebo>
+  
+<!--  <gazebo reference = "right_arm_link1">
+	 <self_collide>true</self_collide>
+ </gazebo>-->
+ 
+ <gazebo reference = "right_arm_link2">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "right_arm_link3">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "right_arm_link4">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "right_arm_link5">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "right_arm_link6">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "right_arm_link7">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "right_arm_finger1_link1">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "right_arm_finger1_link2">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "right_arm_finger1_link3">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "right_arm_finger2_link1">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "right_arm_finger2_link2">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "right_arm_finger2_link3">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "right_arm_finger3_link1">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "right_arm_finger3_link2">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ <gazebo reference = "right_arm_finger3_link3">
+	 <self_collide>true</self_collide>
+ </gazebo>
+ 
+ 
+ 
+ 
+ 
+</robot>

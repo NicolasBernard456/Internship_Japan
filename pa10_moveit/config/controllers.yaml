@@ -1,0 +1,33 @@
+controller_list:
+ - name: /pa10/joint_trajectory_controller
+   action_ns: follow_joint_trajectory
+   type: FollowJointTrajectory
+   default: true
+   joints:
+     - joint1
+     - joint2
+     - joint3
+     - joint4
+     - joint5
+     - joint6
+     - joint7
+   constraints:
+    joint1:
+      goal: 0.5
+    joint2:
+      goal: 0.5
+    joint3:
+      goal: 0.5
+    joint4:
+      goal: 0.5
+    joint5:
+      goal: 0.5
+    joint6:
+      goal: 0.5
+      
+ #- name: gripper
+   #action_ns: gripper_action
+   #type: GripperCommand
+   #default: true
+   #joints:
+     #- joint7

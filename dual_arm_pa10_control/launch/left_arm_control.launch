@@ -1,0 +1,21 @@
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find dual_arm_pa10_control)/config/left_arm_control.yaml" command="load"/>
+  <rosparam file="$(find dual_arm_pa10_control)/config/left_arm_gripper.yaml" command="load"/>
+  <!-- load the controllers -->
+  <node name="controller_spawner_left" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" ns="/dual_arm_pa10/left_arm" args="joint_state_controller
+					  joint_trajectory_controller"/>
+
+    <node name="controller_spawner_gripper" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" ns="/dual_arm_pa10/left_arm" args="gripper_controller"/>
+					  
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher_left" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/dual_arm_pa10/left_arm/joint_states" />
+  </node>
+
+  <node name="gripper_control" pkg = "dual_arm_pa10_control" type="gripper_control_dual_arm" output="screen" respawn ="true"/>
+</launch>
